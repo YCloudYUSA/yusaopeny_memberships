@@ -360,13 +360,14 @@ class OpenyMemberships extends ControllerBase {
             'branch' => $branch_array,
             'variations' => [],
           ];
-          foreach ($product->variations as $variant) {
+          foreach ($product->getVariations() as $variant) {
             $products[$product->uuid()]['variations'][] = [
-              'uuid' => $variant->entity->uuid(),
-              'id' => $variant->entity->id(),
-              'price' => $variant->entity->getPrice()->toArray()['number'],
-              'field_best_value' => $variant->entity->field_best_value->value,
-              'title' => $variant->entity->label(),
+              'uuid' => $variant->uuid(),
+              'id' => $variant->id(),
+              'price' => $variant->getPrice()->toArray()['number'],
+              'field_best_value' => $variant->field_best_value->value,
+              'title' => $variant->label(),
+              'activenetUrl' => $variant->field_daxko_link->uri,
             ];
           }
         }
