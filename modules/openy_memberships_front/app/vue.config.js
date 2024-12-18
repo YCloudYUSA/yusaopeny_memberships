@@ -3,6 +3,9 @@ module.exports = {
   "filenameHashing": false,
   "configureWebpack": {
     "devtool": process.env.NODE_ENV == "development" ? "source-map" : "none",
+    watchOptions: {
+      poll: 1000,
+    },
   },
   "css": {
     "extract": {
