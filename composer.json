@@ -17,7 +17,7 @@
         }
     },
     "require": {
-        "drupal/commerce": "^2.40",
+        "drupal/commerce": "2.36",
         "openy/commerce_addon": "dev-8.x-1.x || ^1.0",
         "openy/openy_prgf_sidebar_menu": "9.x-dev || ^1.1.0",
         "openy/openy_block_modal": "^1.0",
