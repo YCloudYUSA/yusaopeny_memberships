@@ -1,0 +1,10 @@
+name: Open Y Modal Block
+description: Implements a simple block with a body and title that will be used to display modal windows.
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+package: YMCA Website Services
+dependencies:
+  - drupal:block_content
+  - drupal:field
+  - openy_block
+  - drupal:text

@@ -1,0 +1,11 @@
+entity.commerce_addon.collection:
+  title: 'Add-ons'
+  route_name: 'entity.commerce_addon.collection'
+  description: 'Purchasable add-ons'
+  parent: 'commerce.admin_commerce'
+  weight: 10
+entity.commerce_addon_type.collection:
+  title: 'Add-on types'
+  route_name: 'entity.commerce_addon_type.collection'
+  parent: 'commerce_product.configuration'
+  description: 'Manage fields, form and display settings for your add-ons.'
