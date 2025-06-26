@@ -17,13 +17,10 @@
         }
     },
     "require": {
-        "drupal/commerce": "2.36",
-        "openy/commerce_addon": "dev-8.x-1.x || ^1.0",
-        "openy/openy_prgf_sidebar_menu": "9.x-dev || ^1.1.0",
-        "openy/openy_block_modal": "^1.0",
-        "drupal/paragraph_skins": "3.0.1 as 2.0",
-        "openy/commerce_cart_api": "dev-8.x-1.x || ^1.0",
-        "drupal/symfony_mailer": "^1.0@alpha || ^1.0",
+        "drupal/commerce": "^2",
+        "drupal/paragraph_skins": "*",
+        "drupal/commerce_cart_api": "*",
+        "drupal/symfony_mailer": "*",
         "drupal/webform": "^6.1"
     },
     "replace": {
@@ -31,9 +28,6 @@
     },
     "extra": {
         "patches": {
-            "openy/commerce_cart_api": {
-                "missing \"$body\" argument for POST (D9)": "https://www.drupal.org/files/issues/2020-11-06/3149540-6.patch"
-            },
             "openy/commerce_addon": {
                 "Support Drupal 9 - issue 3139887": "https://www.drupal.org/files/issues/2020-05-23/commerce_addon.1.x-dev.rector.patch"
             }
