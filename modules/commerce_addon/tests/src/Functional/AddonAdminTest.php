@@ -12,7 +12,7 @@ use Drupal\Tests\commerce\Functional\CommerceBrowserTestBase;
  */
 class AddonAdminTest extends CommerceBrowserTestBase {
 
-  public static $modules = [
+  protected static $modules = [
     'commerce_addon',
   ];
 

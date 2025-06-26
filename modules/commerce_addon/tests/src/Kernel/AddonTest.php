@@ -13,14 +13,14 @@ use Drupal\Tests\commerce\Kernel\CommerceKernelTestBase;
  */
 class AddonTest extends CommerceKernelTestBase {
 
-  public static $modules = [
+  protected static $modules = [
     'commerce_addon',
   ];
 
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
     $this->installEntitySchema('commerce_addon');
   }

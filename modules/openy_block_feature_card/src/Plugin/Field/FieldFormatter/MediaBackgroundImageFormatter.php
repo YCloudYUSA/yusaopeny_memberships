@@ -129,7 +129,7 @@ class MediaBackgroundImageFormatter extends ImageFormatter {
         $imageUrl = $style->buildUrl($uri);
       }
       else {
-        $imageUrl = file_create_url($uri);
+        $imageUrl = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
       }
 
       $elements[$delta] = [
