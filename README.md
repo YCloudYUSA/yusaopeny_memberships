@@ -5,12 +5,6 @@
 By installing this module, you will have completed solution for the membership search and select functionality for you Open Y website.
 It includes landing pages and application for memberships builder.
 
-## Requirements
-
-PHP 7.4+ with ini_set function enabled,
-
-Open Y 2.5+
-
 ## Installation
 
 You can install this module with help of composer. Please, use this command:
@@ -28,6 +22,19 @@ You need to build styles using this commands
 `npm install`
 `npm run scss-build`
 
+### If you do not have mail system installed
+
+If you do not have mail system installed, and you need support for sending emails, please configure your mail system.
+
+For example, you can use smtp and mailsystem:
+
+And it to your project with composer:
+```bash
+composer require "drupal/smtp" "drupal/mailsystem"
+drush en smtp mailsystem -y
+```
+And configure over UI with you smtp provider settings.
+
 ## Upgrade to 2.4 version
 
 Release 2.3 (https://github.com/ycloudyusa/yusaopeny_memberships/releases/tag/2.3) is needed as an intermediate state for the upgrade path.
@@ -44,9 +51,12 @@ To install the demo content, please do next steps:
 
 Steps for installation - CI sources https://github.com/ymcatwincities/openy-cibox-build/blob/master/devops/reinstall/vars/environments/membership_framework_env.yml
 
-- Install Open Y standard *without demo content*
+- Install Open Y standard *without demo content* 
+  run ```drush si openy openy_configure_profile.preset=standard openy_theme_select.theme=openy_carnation openy_select_content.content=0 openy_terms_of_use.agree_openy_terms=1 install_configure_form.enable_update_status_emails=NULL <you addtional settings>```
 
 - run ```drush en openy_carnation -y```
+
+- run ```drush cset system.date country.default "US" -y```
 
 - run ```drush en openy_memberships_demo_content -y```
 
