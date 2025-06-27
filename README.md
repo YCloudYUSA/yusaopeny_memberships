@@ -84,4 +84,4 @@ And add the DiscountFinder step here: /admin/openy/memberships/settings (after t
 
 For site admins and content managers to configure and update their online membership experience.
 
-https://github.com/ycloudyusa/yusaopeny_memberships/wiki
+[docs/Home.md](docs/Home.md) 
