@@ -62,8 +62,6 @@ Steps for installation - CI sources: https://github.com/ymcatwincities/openy-cib
 
 - run ```drush en openy_memberships_demo_content -y```
 
-- run ```drush mim --group=openy_demo_fblock```
-
 - run ```drush mim --group=openy_demo_term```
 
 - run ```drush mim --group=openy_demo_nbranch```
