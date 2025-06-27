@@ -38,5 +38,4 @@ dependencies:
   - openy_prgf_block_container
   - openy_prgf_sidebar_menu
   - paragraph_skins
-  - symfony_mailer
 core_incompatible: false

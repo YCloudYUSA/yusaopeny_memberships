@@ -18,9 +18,8 @@
     },
     "require": {
         "drupal/commerce": "^2",
-        "drupal/paragraph_skins": "*",
-        "drupal/commerce_cart_api": "*",
-        "drupal/symfony_mailer": "*",
+        "drupal/paragraph_skins": "^3",
+        "drupal/commerce_cart_api": "^1.9",
         "drupal/webform": "^6.1"
     },
     "replace": {
