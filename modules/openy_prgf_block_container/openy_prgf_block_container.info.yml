@@ -1,7 +1,7 @@
 name: 'OpenY Paragraph Block Container'
 description: 'Feature with Memberships paragraph.'
 type: module
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - datalayer
   - field

@@ -1,7 +1,7 @@
 name: 'Open Y Sidebar Menu'
 description: 'SideBar menu for referencing menu blocks and using in SideBars across different pages. '
 type: module
-core_version_requirement: ^9.4 || ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - field
   - drupal:metatag
