@@ -2,6 +2,20 @@
 use Drupal\user\Entity\Role;
 use Drupal\Core\Field\BaseFieldDefinition;
 
+function __openy_memvership_set_roles() {
+  $role_object = Role::load('anonymous');
+  $role_object->grantPermission('create customer profile');
+  $role_object->grantPermission('update own customer profile');
+  $role_object->grantPermission('view own customer profile');
+  $role_object->save();
+
+  $role_object = Role::load('authenticated');
+  $role_object->grantPermission('create customer profile');
+  $role_object->grantPermission('update own customer profile');
+  $role_object->grantPermission('view own customer profile');
+  $role_object->save();
+}
+
 function openy_memberships_install() {
   $role_object = Role::load('anonymous');
   $role_object->grantPermission('create family_members profile');
@@ -34,9 +48,7 @@ function openy_memberships_install() {
   $config = $config_factory->getEditable('jsonapi.settings');
   $config->set('read_only', FALSE)->save();
 
-  openy_memberships_update_8002();
-  openy_memberships_update_8003();
-  openy_memberships_update_8005();
+  __openy_memvership_set_roles();
 }
 
 
@@ -83,17 +95,7 @@ function openy_memberships_update_8002() {
  * Update permissions.
  */
 function openy_memberships_update_8003() {
-  $role_object = Role::load('anonymous');
-  $role_object->grantPermission('create customer profile');
-  $role_object->grantPermission('update own customer profile');
-  $role_object->grantPermission('view own customer profile');
-  $role_object->save();
-
-  $role_object = Role::load('authenticated');
-  $role_object->grantPermission('create customer profile');
-  $role_object->grantPermission('update own customer profile');
-  $role_object->grantPermission('view own customer profile');
-  $role_object->save();
+  __openy_memvership_set_roles();
 }
 
 /**
