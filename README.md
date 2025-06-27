@@ -12,6 +12,9 @@ You can install this module with help of composer. Please, use this command:
 `composer config minimum-stability dev`
 `composer require ycloudyusa/yusaopeny_memberships`
 
+If you have error when installing commerce module no campability with inline_entity_form use this command:
+`composer require "drupal/inline_entity_form:2.0.0-rc10 as 1.0"`
+
 We strongly recomment to use composer, because OpenY Membership project requires a lot of dependencies.
 
 You need to build styles using this commands
