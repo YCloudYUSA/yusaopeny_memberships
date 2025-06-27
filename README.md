@@ -56,7 +56,7 @@ Steps for installation - CI sources: https://github.com/ymcatwincities/openy-cib
 - Install Open Y standard *without demo content* 
   run ```drush si openy openy_configure_profile.preset=standard openy_theme_select.theme=openy_carnation openy_select_content.content=0 openy_terms_of_use.agree_openy_terms=1 install_configure_form.enable_update_status_emails=NULL <your additional settings>```
 
-- run ```drush en openy_carnation -y```
+- run ```drush en openy_addthis -y```
 
 - run ```drush cset system.date country.default "US" -y```
 
@@ -67,6 +67,8 @@ Steps for installation - CI sources: https://github.com/ymcatwincities/openy-cib
 - run ```drush mim --group=openy_demo_nbranch```
 
 - run ```drush mim --group=openy_memberships_demo_content```
+
+- run ```drush cset system.site page.front "/membership-builder" -y```
 
 - Visit /membership-builder page to check how it works. Step 6 installs demo branches. You can skip it if you are adding the Membership Framework to a currently installed Open Y.
 
