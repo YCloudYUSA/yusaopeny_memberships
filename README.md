@@ -51,7 +51,9 @@ To install the demo content, please follow these steps:
 `drush en openy_memberships_demo_content -y`
 2. [Run demo content migrations from the module description](https://github.com/ycloudyusa/yusaopeny_memberships/tree/master/modules/openy_memberships_demo_content)
 
-Steps for installation - CI sources: https://github.com/ymcatwincities/openy-cibox-build/blob/master/devops/reinstall/vars/environments/membership_framework_env.yml
+## Installation of the Memberships Framework on a new Open Y site
+
+- Follow the instruction of [yusaopeny-project](https://github.com/YCloudYUSA/yusaopeny-project?tab=readme-ov-file#installation) to install yusaopeny code.
 
 - Install Open Y standard *without demo content* 
   run ```drush si openy openy_configure_profile.preset=standard openy_theme_select.theme=openy_carnation openy_select_content.content=0 openy_terms_of_use.agree_openy_terms=1 install_configure_form.enable_update_status_emails=NULL <your additional settings>```
