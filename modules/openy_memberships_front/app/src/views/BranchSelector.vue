@@ -53,9 +53,13 @@ export default {
       this.isLoading = false
       this.locations = Object.keys(data.data).map(key => {
         let attributes = data.data[key].attributes;
+        let address = '';
+        if (attributes.field_location_address && attributes.field_location_address.locality) {
+          address = attributes.field_location_address.locality + ', ' + attributes.field_location_address.administrative_area;
+        }
         return {
           name: attributes.title,
-          address: attributes.field_location_address.locality + ', ' + attributes.field_location_address.administrative_area,
+          address: address,
           value: attributes.drupal_internal__nid
         }
       })

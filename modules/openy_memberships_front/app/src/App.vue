@@ -31,10 +31,11 @@ export default {
       this.$router.replace({ name:  steps[0] })
     }
     // Check if user has selected Home Branch and set location.
-    if (this.$cookies.get('home_branch').id !== null) {
-      this.$store.commit('setLocation', this.$cookies.get('home_branch').id);
+    const homeBranch = this.$cookies.get('home_branch');
+    if (homeBranch && homeBranch.id !== null) {
+      this.$store.commit('setLocation', homeBranch.id);
       // Move to next step if we still on initial step.
-      if (step == 0 && this.$cookies.get('home_branch').id !== null) {
+      if (step == 0) {
         this.$store.commit('setStep', 1);
       }
     }
@@ -56,7 +57,8 @@ export default {
       let steps = this.$store.state.steps;
       let currentStep = this.$store.state.steps.indexOf(to.name);
       // Check if user has selected Home Branch, and avoid redirect to BranchSelector.
-      if (this.$cookies.get('home_branch').id !== null && this.$store.state.location && to.name == 'BranchSelectorHome') {
+      const homeBranch = this.$cookies.get('home_branch');
+      if (homeBranch && homeBranch.id !== null && this.$store.state.location && to.name == 'BranchSelectorHome') {
         this.$store.commit('setStep', 1);
         this.$router.push({ name:  steps[1] });
       }
