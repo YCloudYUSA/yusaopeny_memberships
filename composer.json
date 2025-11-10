@@ -1,5 +1,6 @@
 {
     "name": "ycloudyusa/yusaopeny_memberships",
+    "version": "3.0.1",
     "type": "drupal-module",
     "description": "Implement Membership Framework for YUSA OpenY and Drupal community",
     "keywords": [
@@ -17,10 +18,10 @@
         }
     },
     "require": {
-        "drupal/commerce": "^2",
-        "drupal/paragraph_skins": "^3",
-        "drupal/commerce_cart_api": "^1.9",
-        "drupal/webform": "^6.1"
+        "drupal/commerce": "^2 || ^3",
+        "drupal/commerce_cart_api": "^1.9 || ^2",
+        "drupal/webform": "^6.1",
+        "drupal/paragraph_skins": "^3.1"
     },
     "replace": {
         "openy/openy_memberships":"*"
