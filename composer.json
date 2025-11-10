@@ -20,7 +20,8 @@
     "require": {
         "drupal/commerce": "^2 || ^3",
         "drupal/commerce_cart_api": "^1.9 || ^2",
-        "drupal/webform": "^6.1"
+        "drupal/webform": "^6.1",
+        "drupal/paragraph_skins": "^3.1"
     },
     "replace": {
         "openy/openy_memberships":"*"
