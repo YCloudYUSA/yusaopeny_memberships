@@ -1,6 +1,5 @@
 {
     "name": "ycloudyusa/yusaopeny_memberships",
-    "version": "3.0.1",
     "type": "drupal-module",
     "description": "Implement Membership Framework for YUSA OpenY and Drupal community",
     "keywords": [
