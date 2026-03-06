@@ -5,7 +5,6 @@ dependencies:
     - field.field.paragraph.block_container.field_block_ref
     - paragraphs.paragraphs_type.block_container
   module:
-    - entity_browser_entity_form
     - inline_entity_form
 id: paragraph.block_container.default
 targetEntityType: paragraph
@@ -25,9 +24,7 @@ content:
       collapsible: false
       collapsed: false
       allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: _none
+    third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
 hidden:
