@@ -11,6 +11,7 @@ dependencies:
   module:
     - link
     - media_library
+    - openy_focal_point
     - text
 id: block_content.feature_card.default
 targetEntityType: block_content
