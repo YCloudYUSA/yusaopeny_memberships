@@ -20,7 +20,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   id = "openy_memberships_multi_item",
  *   label = @Translation("OpenY Memberships Multi Item"),
  *   description = @Translation("An entity field containing an two entity references and quatity field."),
- *   category = @Translation("Reference"),
+ *   category = "reference",
  *   default_widget = "openy_memberships_multi_item_autocomplete",
  *   default_formatter = "openy_memberships_multi_item_label",
  *   list_class = "\Drupal\Core\Field\EntityReferenceFieldItemList",
